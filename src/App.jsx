@@ -20,7 +20,7 @@ function App() {
           >
           With Icons
           </Button></div>
-          <h2 className="text-2xl font-semibold mb-4">Button with only right icon</h2>
+          <h2 className="text-2xl font-semibold mb-4">Button with only right side icon</h2>
           <div>
           {/*Show right icon only */}
           <Button
@@ -33,7 +33,7 @@ function App() {
           >
           Right Only
           </Button></div>
-          <h2 className="text-2xl font-semibold mb-4">Button with only left icon</h2>
+          <h2 className="text-2xl font-semibold mb-4">Button with only left side icon</h2>
           <div>
           {/*Show left icon only */}
           <Button
