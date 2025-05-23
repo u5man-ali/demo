@@ -1,5 +1,7 @@
 import './App.css'
 import Button from './components/button'
+import leftIcon from './icons/Placeholder-Outline.svg?react'
+import rightIcon from './icons/Arrow-Enter-Left-Outline.svg?react'
 
 function App() {
   return (
@@ -9,7 +11,48 @@ function App() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Buttons</h2>
         <div className="flex gap-4 flex-wrap">
-          <Button label="Primary" />
+          {/*Show both icons */}
+          <Button
+            size="md"
+            variant="primary"
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
+          >
+          With Icons
+          </Button>
+          {/*Show right icon only */}
+          <Button
+            size="md"
+            variant="secondary"
+            showLeftIcon={false}
+            leftIcon={leftIcon}
+            showRightIcon={true}
+            rightIcon={rightIcon}            
+          >
+          Right Only
+          </Button>
+          {/*Show left icon only */}
+          <Button
+            size="md"
+            variant="success"
+            showLeftIcon={true}
+            leftIcon={leftIcon}
+            showRightIcon={false}
+            rightIcon={rightIcon}
+          >
+          Left Only
+          </Button>
+          {/* Hide both icons */}
+          <Button
+            size="md"
+            variant="neutral"
+            showLeftIcon={false}
+            leftIcon={leftIcon}
+            showRightIcon={false}
+            rightIcon={righIcon}            
+          >
+          No Icons
+          </Button>
           <Button label="Secondary" variant="secondary" />
           <Button label="Disabled" disabled />
         </div>
