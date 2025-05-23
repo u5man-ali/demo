@@ -1,7 +1,7 @@
 import './App.css'
 import Button from './components/button'
-import leftIcon from './icons/Placeholder-Outline.svg?react'
-import rightIcon from './icons/Arrow-Enter-Left-Outline.svg?react'
+import IconLeft from './icons/Placeholder-Outline.svg?react'
+import IconRight from './icons/Arrow-Enter-Left-Outline.svg?react'
 
 function App() {
   return (
@@ -9,52 +9,56 @@ function App() {
       <h1 className="text-3xl font-bold mb-6">DC Ultimate UI Kit - Live Preview</h1>
       
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Buttons</h2>
+        <h2 className="text-2xl font-semibold mb-4">Button with both icons</h2>
         <div className="flex gap-4 flex-wrap">
           {/*Show both icons */}
           <Button
             size="md"
             variant="primary"
-            leftIcon={leftIcon}
-            rightIcon={rightIcon}
+            leftIcon={IconLeft}
+            rightIcon={IconRight}
           >
           With Icons
-          </Button>
+          </Button></div>
+          <h2 className="text-2xl font-semibold mb-4">Button with only right icon</h2>
+          <div>
           {/*Show right icon only */}
           <Button
             size="md"
             variant="secondary"
             showLeftIcon={false}
-            leftIcon={leftIcon}
+            leftIcon={IconLeft}
             showRightIcon={true}
-            rightIcon={rightIcon}            
+            rightIcon={IconRight}            
           >
           Right Only
-          </Button>
+          </Button></div>
+          <h2 className="text-2xl font-semibold mb-4">Button with only left icon</h2>
+          <div>
           {/*Show left icon only */}
           <Button
             size="md"
             variant="success"
             showLeftIcon={true}
-            leftIcon={leftIcon}
+            leftIcon={IconLeft}
             showRightIcon={false}
-            rightIcon={rightIcon}
+            rightIcon={IconRight}
           >
           Left Only
-          </Button>
+          </Button></div>
+          <h2 className="text-2xl font-semibold mb-4">Button without any icons</h2>
+          <div>
           {/* Hide both icons */}
           <Button
             size="md"
             variant="neutral"
             showLeftIcon={false}
-            leftIcon={leftIcon}
+            leftIcon={IconLeft}
             showRightIcon={false}
-            rightIcon={righIcon}            
+            rightIcon={IconRight}            
           >
           No Icons
           </Button>
-          <Button label="Secondary" variant="secondary" />
-          <Button label="Disabled" disabled />
         </div>
       </section>
       {/* Place your components here */}
